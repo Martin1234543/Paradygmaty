@@ -1,0 +1,154 @@
+String.prototype.mirror=function(/ 2 console.log( this.split("").reverse().join("")): 
+3 
+4 "Ala ma kota".mirror(): 
+5- function createcounter ( let counter-0: H 
+D 
+function counterPlus 
+counter++: 
+return counter; 
+return counterPlus; 
+13 const counter1 - createCounter(): 
+14 console.log(counter1()): //1 
+C 
+15 onsole.log(counter1()): / 2 
+16 console.log(counter1()): / 3 
+17 
+JS 
+18 const counter2 = createCounter(): 
+console.log(counter2()): //1 
+console.log(counter2()): // 2 
+
+const text-t 
+console.log(txt.includes(word)): )* 
+2 check(txt. word) 
+3 A 
+5 getCount(txt) 6 console.log(txt.length): 
+B 
+DD 
+7 
+~ 
+O 
+8- setcapitalize(txt) let es-txt. split(" ").map(word=>word. charAt(0). toUpperCase()+word.slice(1))-join(" "): 9 10 console. log(res): 
+11 
+12 sethix(txt) 
+○ 
+C 
+13 let res-""; 14- for(let i-0:i<txt.length;i++)/ 
+if(i%2--=1)f res+-txt.charAt(i).toUpperCase(); Jelset res+-txt.charAt(i).toLowerCase(): 
+15- 16 17 18 19 20 
+JS 
+TS 
+21 console.log(res): 22 
+23 generateRandom(lng)t 
+24 25 
+let letters-"abcdefghijklmnoprstuwxyz": let res-"": 
+26 let rand-0: 
+27- 28 29 30 31 32 33 Ph 
+for(let 1-0:1<lng:i++) rand-Math.floor(Math.random( * letters.length): res+-(letters.charAt(rand)); f 
+GO 
+Php 
+T console-log(res); 
+H 
+34 text.check("ala ma kota", "kota"): 35 text.getCount("ala ma kota"): 36 text. setCapitalize("ala ma kota"): 37 text.setMix("ala ma kota"): 38 text.generateRandom(10):
+
+
+class bookf 
+2 3 4 
+users-[]: 
+addUser (name, age, phone)t 
+this.users.push(fname. age. phone)): 
+5 T 
+E 
+6 showusers( 
+7. 8 15 16 
+for(let i-0;i<this.users.length;i++)/ console.log(this.users[i]): 
+findByName(name)i 
+return this.users.filter(word=>word.name===name): 
+findByPhone(phone) 
+return this.users.filter(user->user.phone==-phone) 
+f 
+17 getcount0 
+JS 
+return this.users.length; 
+TS 
+21 const books-new book(); 
+22 books.adduser ("bob", 21, 122334): 
+23 books-adduser("rob" , 21, 122334): 
+25 
+24 books.addUser("bob", 21, 111111): 
+26 books-showsers(); 
+27 console.log(books.findByName("bob")): 
+28 console.log(books.findByPhone(122334)); 
+GO 
+29 console. log(books.getCount()): 
+
+function longestCommonPrefix(strs) {
+    if (strs.length === 0) return ""; 
+
+    let prefix = strs[0]; // zakładamy, że pierwszy element to cały prefix 
+
+    for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0) {
+            // skracamy prefix aż pasuje do początku aktualnego słowa
+            prefix = prefix.slice(0, -1);
+            if (prefix === "") return "";
+        }
+    } 
+
+    return prefix;
+} 
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"])); // "fl"
+console.log(longestCommonPrefix(["dog", "racecar", "car"]));    // ""
+console.log(longestCommonPrefix(["interspecies", "interstellar", "interstate"])); // "inters" 
+
+function last(str) {
+    let res = str.trim().split(" ").filter(word => word !== "");
+    return res[res.length - 1].length;
+} 
+
+class Book {
+    constructor() {
+        this.users = [];
+    } 
+
+    addUser(name, age, phone) {
+        this.users.push({ name, age, phone });
+    } 
+
+    showUsers() {
+        for (let i = 0; i < this.users.length; i++) {
+            console.log(this.users[i]);
+        }
+    }
+} 
+
+const myBook = new Book();
+myBook.addUser("bob", 21, 122334);
+myBook.addUser("alice", 25, 987654);
+myBook.showUsers(); 
+
+findByName(name) {
+    return this.users.filter(user => user.name === name);
+}
+
+
+function setCapitalize(txt) {
+    let res = txt
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    console.log(res);
+} 
+
+function generateRandom(lng) {
+    const letters = "abcdefghijklmnoprstuwxyz";
+    let res = ""; 
+
+    for (let i = 0; i < lng; i++) {
+        let rand = Math.floor(Math.random() * letters.length);
+        res += letters.charAt(rand);
+    } 
+
+    console.log(res);
+}
