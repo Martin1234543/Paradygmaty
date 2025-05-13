@@ -1,1 +1,2 @@
 # Paradygmaty
+github.com/PawelBorowiecki
